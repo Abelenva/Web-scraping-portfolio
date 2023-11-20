@@ -1,24 +1,36 @@
 ![logo_ironhack_blue 7](https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png)
 
-# Lab | Web Scraping Single Page (GNOD part 1)
+# Gnod Music Recommender System
 
-#### Business goal:
+## Project Overview
 
-- Check the `case_study_gnod.md` file.
-- Make sure you've understood the big picture of your project:
+The Gnod Music Recommender System is an advanced music recommendation engine that aims to enhance the user experience on the Gnoosic platform. The goal is to provide song suggestions not only based on collaborative filtering algorithms but also considering acoustic similarities and global popularity trends.
 
-  - the goal of the company (`Gnod`),
-  - their current product (`Gnoosic`),
-  - their strategy, and
-  - how your project fits into this context.
+## Features
 
-  Re-read the business case and the e-mail from the CTO.
+- **Collaborative Filtering**: Leveraging user data to suggest bands and songs that align with their tastes.
+- **Acoustic Similarity**: Recommending songs that match users' preferred acoustic profiles.
+- **Trending Tracks**: Identifying and recommending songs that are trending worldwide.
 
-#### Instructions - Scraping popular songs
+## Data Collection
 
-Your product will take a song as an input from the user and will output another song (the recommendation). In most cases, the recommended song will have to be similar to the inputted song, but the CTO thinks that if the song is on the top charts at the moment, the user will also enjoy a recommendation of another song that is popular at the moment.
+This project utilizes web scraping to gather data on current popular songs from various online charts. The initial phase focuses on extracting song titles and artists from [Popvortex](http://www.popvortex.com/music/charts/top-100-songs.php) and [Billboard Hot 100](https://www.billboard.com/charts/hot-100/), storing the information in pandas dataframes for further analysis.
 
-You have to find data on the internet about currently popular songs. Popvortex maintains a weekly Top 100 of "hot" songs here: [http://www.popvortex.com/music/charts/top-100-songs.php](http://www.popvortex.com/music/charts/top-100-songs.php).
+## Clustering Analysis
 
-It's a good place to start! Scrape the current top 100 songs and their respective artists, and put the information into a pandas dataframe.
+Post data collection, the project will implement clustering algorithms to group similar songs, facilitating targeted recommendations to users based on their input.
 
+## Tools and Technologies
+
+- **Python**: Primary programming language for data collection and analysis.
+- **Pandas**: Data manipulation and analysis.
+- **BeautifulSoup**: Web scraping library to extract data from web pages.
+- **Requests**: HTTP library for Python to send HTTP requests.
+
+## Installation
+
+To set up this project locally, follow these steps:
+
+1. Clone the repository:
+```bash
+git clone https://github.com/Abelenva/Web-scraping-portfolio.git
